@@ -1,20 +1,14 @@
----
----
-
+  
 //
 // IMPORTS
 //
 
-@import "reset";
-@import "variables";
-@import "cutefish";
-@import "site-footer";
+@import "_reset";
+@import "_variables";
 
-// Syntax highlighting @import is at the bottom of this file
-
-/**************/
-/* BASE RULES */
-/**************/
+/*/
+/* BASE RULES
+/*/
 
 html {
   font-size: 100%;
@@ -35,8 +29,8 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: $helveticaNeue;
   color: $darkerGray;
-  font-weight: bold;
-
+  font-weight: 600;
+  
   line-height: 1.7;
   margin: 1em 0 15px;
   padding: 0;
@@ -45,23 +39,25 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.4;
   }
 }
-
-h1 {
-  font-size: 30px;
+  
+h1 {  
+  font-weight: 400;
+  font-size: 32px;
   a {
     color: inherit;
   }
 }
 
-h2 {
+h2 {  
+  font-weight: 400;
   font-size: 24px;
 }
 
-h3 {
-  font-size: 20px;
+h3 {  
+  font-size: 18px;
 }
 
-h4 {
+h4 {  
   font-size: 18px;
   color: $gray;
 }
@@ -100,21 +96,16 @@ ul ul, ol ul {
   list-style-type: circle;
 }
 
-em, i {
+em {
   font-style: italic;
 }
 
-strong, b {
-  font-weight: bold;
+strong {
+  font-weight: 600;
 }
 
 img {
   max-width: 100%;
-}
-
-// Fixes images in popup boxes from Google Translate
-.gmnoprint img {
-  max-width: none;
 }
 
 .date {
@@ -144,21 +135,21 @@ img {
     clear: both;
 }
 
-/*********************/
-/* LAYOUT / SECTIONS */
-/*********************/
+/*/
+/* LAYOUT / SECTIONS
+/*/
 
 //
 // .masthead
 //
 
 .wrapper-masthead {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .masthead {
   border-bottom: 1px solid $lightGray;
-
+  
   @include mobile {
     text-align: center;
   }
@@ -195,7 +186,7 @@ img {
   margin: 0;
   color: $darkGray;
   cursor: pointer;
-  font-family: $helveticaNeue;
+  font-family: $helveticaNeue; 
   font-weight: 300;
   font-size: 28px;
   letter-spacing: 1px;
@@ -205,7 +196,7 @@ img {
   margin: -5px 0 0 0;
   color: $gray;
   font-size: 16px;
-
+  
   @include mobile {
     margin: 3px 0;
   }
@@ -214,9 +205,9 @@ img {
 nav {
   float: right;
   margin-top: 23px; // @TODO: Vertically middle align
-  font-family: $helveticaNeue;
+  font-family: $helveticaNeue; 
   font-size: 18px;
-
+  
   @include mobile {
     float: none;
     margin-top: 9px;
@@ -225,7 +216,7 @@ nav {
   }
 
   a {
-    margin-left: 20px;
+    margin-left: 25px;
     color: $darkGray;
     text-align: right;
     font-weight: 300;
@@ -252,7 +243,7 @@ nav {
   border-bottom: none;
 }
 
-.post {
+.post { 
   blockquote {
     margin: 1.8em .8em;
     border-left: 2px solid $gray;
@@ -260,15 +251,6 @@ nav {
     color: $gray;
     font-size: 22px;
     font-style: italic;
-  }
-
-  .comments {
-    margin-top: 10px;
-  }
-
-  .read-more {
-    text-transform: uppercase;
-    font-size: 15px;
   }
 }
 
@@ -286,5 +268,4 @@ footer {
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
-@import "highlights";
-@import "svg-icons";
+@import "_highlights";

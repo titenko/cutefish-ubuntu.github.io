@@ -28,7 +28,7 @@ disqus: cutefish-ubuntu
 google_analytics: G-PXWBYKLNGL
 url: https://cutefish-ubuntu.github.io/
 baseurl: 
-markdown: redcarpet
+markdown: kramdown
 highlighter: pygments
 permalink: "/:title/"
 version: v1.0.0
